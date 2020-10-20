@@ -1,0 +1,78 @@
+*pdftk.txt* Edit metadata (e.g. author, title, etc) and bookmark of pdf by vim.
+>
+			   _  __ _   _           _
+		 _ __   __| |/ _| |_| | ____   _(_)_ __ ___
+		| '_ \ / _` | |_| __| |/ /\ \ / / | '_ ` _ \
+		| |_) | (_| |  _| |_|   < _\ V /| | | | | | |
+		| .__/ \__,_|_|  \__|_|\_(_)\_/ |_|_| |_| |_|
+		|_|
+<
+Version: 0.0.1
+=============================================================================
+CONTENTS                                                     *pdftk-contents*
+
+01. Intro ..................................................... |pdftk-intro|
+02. Commands ............................................... |pdftk-commands|
+03. Variables ............................................. |pdftk-variables|
+04. Filetypes ............................................. |pdftk-filetypes|
+
+=============================================================================
+INTRO                                                           *pdftk-intro*
+
+See README.md.
+
+=============================================================================
+FILETYPES                                                   *pdftk-filetypes*
+
+pdftk
+
+pdftk is the file software pdftk generating.
+It contains some information of pdf. such as metadata and bookmarks.
+
+The plugin provides syntax, fold, indent file of pdftk.
+
+=============================================================================
+COMMANDS                                                     *pdftk-commands*
+
+                                               *:PdftkDump* *pdftk-:PdftkDump*
+:PdftkDump [arg]        Generate pdftk file of a pdf [arg].
+
+=============================================================================
+VARIABLES                                                   *pdftk-variables*
+
+                                                      *g:pdftk#convert_rule*
+g:pdftk#temp_dir
+                        The suffix of pdftk file pdftk generating.
+                        Default:
+>
+        let g:pdftk#temp_dir = has('win32') ? $HOME . '/AppData/Local' :
+				\ '/tmp'
+<
+g:pdftk#suffix
+                        The suffix of new pdf pdftk generating.
+                        Default:
+>
+        let g:pdftk#suffix = '-pdftk.pdf'
+<
+g:pdftk#dump#cmd
+                        The command of pdftk dumping data.
+                        Default:
+>
+        let g:pdftk#dump#cmd = 'dump_data_utf8'
+<
+                        Perhaps someone want:
+>
+        let g:pdftk#dump#cmd = 'dump_data'
+<
+g:pdftk#update#cmd
+                        The command of pdftk updating info.
+                        Default:
+>
+        let g:pdftk#update#cmd = 'update_info_utf8'
+<
+                        Perhaps someone want:
+>
+        let g:pdftk#update#cmd = 'update_info'
+<
+
+vim:tw=77:isk=!-~,^*,^\|,^\":ts=8:noet:ft=help:norl:

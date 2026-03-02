@@ -10,13 +10,13 @@ Usage
 In shell,
 
 ```{.sh}
-vi -c 'PdftkDump /the/path/of/test.pdf'
+vi pdftk:///the/path/of/test.pdf
 ```
 
 or in vim,
 
 ```{.vim}
-PdftkDump /the/path/of/test.pdf
+:edit pdftk:///the/path/of/test.pdf
 ```
 
 Dependent

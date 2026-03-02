@@ -6,7 +6,11 @@ let g:loaded_pdftk = 1
 let s:save_cpoptions = &cpoptions
 set cpoptions&vim
 
-command! -nargs=1 -complete=file PdftkDump call pdftk#dump(<q-args>)
+augroup pdftk
+  autocmd!
+  autocmd BufReadCmd,SessionLoadPost pdftk://* call pdftk#read()
+  autocmd BufWriteCmd pdftk://* call pdftk#write()
+augroup END
 
 let &cpoptions = s:save_cpoptions
 unlet s:save_cpoptions

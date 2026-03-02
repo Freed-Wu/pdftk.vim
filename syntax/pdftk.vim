@@ -4,11 +4,12 @@ endif
 let s:save_cpoptions = &cpoptions
 set cpoptions&vim
 
-syn keyword	pdftkBegin	InfoBegin BookmarkBegin PageMediaBegin
+syn keyword	pdftkBegin	InfoBegin BookmarkBegin PageMediaBegin PageLabelBegin
 syn keyword	pdftkInfo	InfoKey InfoValue
 syn keyword	pdftkInfoKey	Keywords Creator ModDate CreationDate Producer Subject Author Title Language Company SourceModified
 syn keyword	pdftkBookmark	BookmarkTitle BookmarkLevel BookmarkPageNumber
 syn keyword	pdftkPageMedia	PageMediaNumber PageMediaRotation PageMediaRect PageMediaDimensions
+syn keyword	pdftkPageLabel	PageLabelNewIndex PageLabelStart PageLabelNumStyle
 syn keyword	pdftkType	NumberOfPages
 syn match	pdftkId		display '\<PdfID\d\+\>'
 syn case ignore
@@ -21,6 +22,7 @@ hi def link pdftkBegin		Function
 hi def link pdftkInfo		pdftkType
 hi def link pdftkBookmark	pdftkType
 hi def link pdftkPageMedia	pdftkType
+hi def link pdftkPageLabel	pdftkType
 hi def link pdftkId		pdftkType
 hi def link pdftkType		Type
 hi def link pdftkInfoKey	Statement

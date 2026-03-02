@@ -2,7 +2,9 @@ pdftk.vim
 =========
 
 A vim wrapper of [ericmason/pdftk]. Edit metadata (e.g. author, title, etc)
-and bookmarks of pdf by vim. [中文]
+and bookmarks of pdf by vim.
+
+[中文文档]
 
 Usage
 -----
@@ -84,7 +86,7 @@ FAQ
 
 See more at [Issues].
 
-  [中文]: https://zhuanlan.zhihu.com/p/216271091
+  [中文文档]: https://www.zhihu.com/question/392666875/answer/2011984218587149341
   [vim/vim]: https://github.com/vim/vim
   [ericmason/pdftk]: https://github.com/ericmason/pdftk
   [Shougo/dein.vim]: https://github.com/Shougo/dein.vim

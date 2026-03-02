@@ -12,11 +12,14 @@ function! pdftk#read() abort "{{{
 
 	let file = pdftk#get_filename()
 	let lines = systemlist(join(['pdftk', shellescape(file), g:pdftk#dump_cmd, 'output', '-']))
-	put=lines
+	silent put=lines
 	1d
 endfunction "}}}
 
 function! pdftk#write() abort "{{{
+	if !&modified
+		return
+	endif
 	let file = pdftk#get_filename()
 	let lines = getline(1, '$')
 	let list = systemlist(join(['pdftk', shellescape(file), g:pdftk#update_cmd, '-', 'output', '-']), lines)

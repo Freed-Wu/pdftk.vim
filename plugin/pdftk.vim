@@ -10,6 +10,10 @@ augroup pdftk
   autocmd!
   autocmd BufReadCmd,SessionLoadPost pdftk://* call pdftk#read()
   autocmd BufWriteCmd pdftk://* call pdftk#write()
+  if get(g:, 'pdftk', 0)
+    autocmd BufReadCmd,SessionLoadPost *.pdf call pdftk#read()
+    autocmd BufWriteCmd *.pdf call pdftk#write()
+  endif
 augroup END
 
 let &cpoptions = s:save_cpoptions

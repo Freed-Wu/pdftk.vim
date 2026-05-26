@@ -3,7 +3,7 @@ let g:pdftk#dump_cmd = get(g:, 'pdftk#dump#cmd', 'dump_data_utf8')
 let g:pdftk#update_cmd = get(g:, 'pdftk#update#cmd', 'update_info_utf8')
 
 function! pdftk#get_filename() abort "{{{
-	return expand(substitute(expand('%'), '^pdftk://', '', ''))
+	return substitute(expand('%'), '\.txt$', '', '')
 endfunction "}}}
 
 function! pdftk#read() abort "{{{

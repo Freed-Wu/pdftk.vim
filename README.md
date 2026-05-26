@@ -12,15 +12,13 @@ Usage
 In shell,
 
 ```{.sh}
-vi pdftk://
-# or
-vi --cmd 'let g:pdftk = 1' /the/path/of/test.pdf
+vi /the/path/of/test.pdf.txt
 ```
 
 or in vim,
 
 ```{.vim}
-:edit pdftk:///the/path/of/test.pdf
+:edit /the/path/of/test.pdf.txt
 ```
 
 Dependent

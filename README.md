@@ -9,6 +9,8 @@ and bookmarks of pdf by vim.
 Usage
 -----
 
+### pdftk
+
 In shell,
 
 ```{.sh}
@@ -21,11 +23,63 @@ or in vim,
 :edit /the/path/of/test.pdf.txt
 ```
 
+### exiftool
+
+```{.sh}
+vi /the/path/of/test.jpg.json
+```
+
+```json
+[{
+  "SourceFile": "1.jpg",
+  "ExifToolVersion": 13.59,
+  "FileName": "1.jpg",
+  "Directory": ".",
+  "FileSize": "101 kB",
+  "FileModifyDate": "2026:06:12 15:56:06+08:00",
+  "FileAccessDate": "2026:06:12 16:00:44+08:00",
+  "FileInodeChangeDate": "2026:06:12 16:00:23+08:00",
+  "FilePermissions": "-rw-r--r--",
+  "FileType": "JPEG",
+  "FileTypeExtension": "jpg",
+  "MIMEType": "image/jpeg",
+  "JFIFVersion": 1.01,
+  "ExifByteOrder": "Big-endian (Motorola, MM)",
+  "XResolution": 1,
+  "YResolution": 1,
+  "ResolutionUnit": "None",
+  "YCbCrPositioning": "Centered",
+  "ImageWidth": 776,
+  "ImageHeight": 1024,
+  "EncodingProcess": "Baseline DCT, Huffman coding",
+  "BitsPerSample": 8,
+  "ColorComponents": 3,
+  "YCbCrSubSampling": "YCbCr4:2:0 (2 2)",
+  "ImageSize": "776x1024",
+  "Megapixels": 0.795
+}]
+```
+
+Edit metainformation:
+
+```json
+[{
+  "XResolution": 2,
+  "YResolution": 2,
+  "ResolutionUnit": "cm"
+}]
+```
+
+```vim
+:wq
+```
+
 Dependent
 ---------
 
 1.  A distribution of vim. Such as [vim/vim].
 2.  [ericmason/pdftk].
+3.  [exiftool](https://github.com/exiftool/exiftool).
 
 Install
 -------

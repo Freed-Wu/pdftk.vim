@@ -89,7 +89,7 @@ Install
 Such as [Shougo/dein.vim], Add the following code to your vimrc.
 
 ``` {.vim}
-call dein#add('Freed-Wu/pdftk.vim')
+call dein#add('Vim-cn/pdftk.vim')
 ```
 
 Then type the code in the command line of vim:
@@ -115,7 +115,7 @@ Dein install
 Download the package first.
 
 ``` {.zsh}
-git clone https://github.com/Freed-Wu/pdftk.vim /path/to/save/this/package
+git clone https://github.com/Vim-cn/pdftk.vim /path/to/save/this/package
 ```
 
 Add the following code to your vimrc.
@@ -147,4 +147,4 @@ See more at [Issues].
   [wsdjeg/dein-ui.vim]: https://github.com/wsdjeg/dein-ui.vim
   [haya14busa/dein-command.vim]: https://github.com/haya14busa/dein-command.vim
   [doc/pdftk.txt]: doc/pdftk.txt
-  [Issues]: https://github.com/Freed-Wu/pdftk.vim/issues
+  [Issues]: https://github.com/Vim-cn/pdftk.vim/issues
